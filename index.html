@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather-app</title>
+    <link rel="icon" href="imgs/sun.png" type="img.png">
+    <!--css link-->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <!--link for google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&family=Orbitron:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!--start header-->
+    <header>
+      <div class="left-section">
+        <span class="span-icon"><i class="fa-solid fa-grip-vertical"></i></span>
+        <span class="span-icon"><i class="fa-solid fa-bell"></i></span>
+        <p class="city-name"></p>
+      </div>
+      <form action="">
+        <input type="search" class="search-input" placeholder="Search City..." />
+        <input type="submit" value="Show Result">
+      </form>
+      <div class="right-section">
+        <div class="switch-mood">
+          <div class="sun switch-element">
+            <i class="fa-regular fa-sun"></i>
+          </div>
+          <div class="moon switch-element active">
+            <i class="fa-solid fa-moon"></i>
+          </div>
+        </div>
+        <div class="search">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+        <div class="profile">
+          <img src="imgs/profile.webp" alt="" />
+        </div>
+      </div>
+    </header>
+    <!--end header-->
+    <div class="content">
+      <section class="section-one">
+        <div class="head">
+          <ul>
+            <li>Today</li>
+            <li>Tomorrow</li>
+            <li class="targeted">Next 7 days</li>
+          </ul>
+          <div class="switch-fc">
+            <span class="active02">Forecast</span>
+            <span>Air quality</span>
+          </div>
+        </div>
+        <div class="scO-content">
+          <div class="today">
+            <div class="hd">
+              <p class="today-name">Monday</p>
+              <p class="time-now">11.42 </p>
+            </div>
+            <div class="text">
+              <div class="left">
+                <p class="temperature"></p>
+                <p class="today-state"></p>
+                <p >Reel Feel <span class="reel-feel">30°c</span></p>
+                <p >wind N.E, <span class="wind">100km/h</span></p>
+                <p >Pressure <span class="pressure">820mb</span></p>
+                <p >Humidity <span class="humidity">50%</span></p>
+              </div>
+              <div class="right">
+                <img class="today-icon" src="imgs/sun.png" alt="" />
+                <p >Sunrise: <span class="sunrise">6.02 AM</span></p>
+                <p >Sunset: <span class="sunset">9.18 PM</span></p>
+              </div>
+            </div>
+          </div>
+          <div class="next-day01 day">
+            <h3>Tue</h3>
+            <img class="day-icon" src="imgs/raining.png" alt="" />
+            <p class="day-temp">10 </p>
+          </div>
+          <div class="next-day02 day">
+            <h3>Wed</h3>
+            <img class="day-icon" src="imgs/rainy-day.png" alt="" />
+            <p class="day-temp">10</p>
+          </div>
+          <div class="next-day03 day">
+            <h3>Thu</h3>
+            <img class="day-icon" src="imgs/heavy-rain.png" alt="" />
+            <p class="day-temp">10 </p>
+          </div>
+          <div class="next-day04 day">
+            <h3>Fri</h3>
+            <img class="day-icon" src="imgs/snow.png" alt="" />
+            <p class="day-temp">10</p>
+          </div>
+          <div class="next-day05 day">
+            <h3>Sat</h3>
+            <img class="day-icon" src="imgs/sun.png" alt="" />
+            <p class="day-temp">10 </p>
+          </div>
+          <div class="next-day06 day">
+            <h3>Sun</h3>
+            <img class="day-icon" src="imgs/storm.png" alt="" />
+            <p class="day-temp">10 </p>
+          </div>
+        </div>
+      </section>
+      <section class="section-two">
+        <div class="overlay"></div>
+        <div class="scTW-content">
+            <h3>Chance of rain</h3>
+           <div class="parent">
+             <div class="left">
+                 <ul>
+                     <li>Rainy</li>
+                     <li>Sunny</li>
+                     <li>Heavy</li>
+                 </ul>
+             </div>
+             <div class="right">
+                 <div>
+                     <span style="height: 70%;"></span>
+                 </div>
+                 <div>
+                     <span style="height:50%;"></span>
+                 </div>
+                 <div>
+                     <span style="height: 60%;"></span>
+                 </div>
+                 <div>
+                     <span style="height: 80%;"></span>
+                 </div>
+                 <div>
+                     <span style="height: 90%;"></span>
+                 </div>
+                 <div>
+                     <span style="height: 95%;"></span>
+                 </div>
+             </div>
+           </div>
+        </div>
+      </section>
+      <section class="section-three">
+        <div class="overlay"></div>
+        <div class="head">
+            <h2>Global Map</h2>
+            <p>View Wide <i class="fa-solid fa-star"></i></p>
+        </div>
+        <div class="mapouter">
+          <div class="gmap_canvas">
+            <iframe
+              width="100%"
+              height="500"
+              id="gmap_canvas"
+              src="https://maps.google.com/maps?q=egypt&t=k&z=3&ie=UTF8&iwloc=&output=embed"
+              frameborder="0"
+              scrolling="no"
+              marginheight="0"
+              marginwidth="0"
+            ></iframe
+            ><a href="https://123movies-to.org"></a><br /><style>
+              .mapouter {
+                position: relative;
+                text-align: right;
+                height: 500px;
+                width: 100%;
+              }</style
+            ><a href="https://www.embedgooglemap.net">google maps api html</a
+            ><style>
+              .gmap_canvas {
+                overflow: hidden;
+                background: none !important;
+                height: 500px;
+                width: 100%;
+              }
+            </style>
+          </div>
+        </div>
+      </section>
+      <section class="section-four">
+        <div class="scF-content">
+          <div class="head">
+            <p>Other large cities</p>
+            <a href="#">Show All ></a>
+          </div>
+          <div class="box California">
+            <div class="left">
+              <h4 class="cali-country">Us</h4>
+              <p>California</p>
+              <p class="cali-state">Raining</p>
+            </div>
+            <div class="right">
+              <img class="cali-icon" src="imgs/raining.png" alt="" />
+              <p class="cali-temp">29</p>
+            </div>
+          </div>
+          <div class="box Beijing">
+            <div class="left">
+              <h4 class="bei-country">China</h4>
+              <p>Beijing</p>
+              <p class="bei-state">Snow</p>
+            </div>
+            <div class="right">
+              <img class="bei-icon" src="imgs/snow.png" alt="" />
+              <p class="bei-temp">19</p>
+            </div>
+          </div>
+          <div class="box Jerusalem">
+            <div class="left">
+              <h4 class="jer-country">Palestine</h4>
+              <p>Jerusalem</p>
+              <p class="jer-state">Mostly Sunny</p>
+            </div>
+            <div class="right">
+              <img class="jer-icon" src="imgs/sun.png" alt="" />
+              <p class="jer-temp">31</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <script src="js/all.min.js"></script>
+    <script src="js/scirpt.js"></script>
+  </body>
+</html>
